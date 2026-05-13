@@ -1,0 +1,158 @@
+body {
+  font-family: Arial, sans-serif; /* Sets the font for the whole website */
+  background-color: #6F00FF;
+  color: white;
+  margin: 0;  /* Removes default browser spacing around page */
+}
+
+/*---------------------------- navigation ---------------------------- */
+
+.navbar {
+  display: flex;   /* Places items side by side */
+  justify-content: space-between;  /* Pushes logo left and nav links right */
+  align-items: center;  /* Vertically centres items */
+  padding: 20px 60px;
+  background-color: #3B0270;
+}
+
+
+/* Logo text styling */
+.logo {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo img {
+    width: 190px;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  list-style: none; /* Removes bullet points */
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none; /* Removes underline */
+  color: #FFF1F1;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: lightblue; /* Changes colour when mouse hovers */
+}
+
+
+/*---------------------------- hero section ---------------------------- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* gives vertical center */
+  padding: 80px 60px;   /* Space inside hero section */
+  gap: 50px;
+  background-color: #4f0a8f;
+}
+
+
+/* Hero text container */
+.hero-text {
+  flex: 1; /* Allows text section to grow evenly */
+}
+
+/* Main heading inside hero */
+.hero-text h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Paragraph inside hero */
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;   /* Space below paragraph */
+  line-height: 1.6;   /* Increases spacing between lines */
+  text-align: center;
+}
+
+/* Hero image container */
+.hero-image {
+  flex: 1;
+}
+
+/* Hero image styling */
+.hero-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/*---------------------------- content section ---------------------------- */
+
+.content-section {
+  display: flex; /* Side by side layout */
+  justify-content: space-between; /* Pushes content apart */
+  align-items: center; /* Aligns content vertically */
+  gap: 50px;
+  padding: 80px 60px;
+}
+
+/* Text side of content section */
+.content-text {
+  flex: 1;
+}
+
+/* Content section headings */
+.content-text h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+/* Content section paragraph text */
+.content-text p {
+  font-size: 18px;
+  line-height: 1.6 ;   /* Line spacing */
+}
+
+/* Image side of content section */
+.content-image {
+  flex: 1; /* Takes equal space */
+}
+
+/* Content section images */
+.content-image img {
+  width: 100%; /* Fills available width */
+  border-radius: 10px;   /* Rounded corners */
+}
+
+ul{
+  font-size: 24px;
+}
+
+/*---------------------------- reverse section ---------------------------- */
+
+.reverse {
+  flex-direction: row-reverse; /* Swaps image and text positions */
+}
+
+/*---------------------------- mobile responsive design ---------------------------- */
+
+@media (max-width: 768px) {
+
+  /* Navbar changes on smaller screens */
+  .navbar {
+    flex-direction: column; /* Stacks logo and links vertically */
+    gap: 20px; /* Space between stacked items */
+  }
+
+  /* Hero and content sections stack vertically */
+  .hero, .content-section, .reverse {
+    flex-direction: column; /* Makes items appear top to bottom */
+  }
+
+  /* Smaller hro heading on mobile */
+  .hero-text h1 {
+    font-size: 36px; /* changes font size */
+  }
+
+}
